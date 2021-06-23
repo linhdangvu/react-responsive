@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './components/navbar/Navbar';
+import MaladieFabry from './components/maladieFabry/MaladieFabry';
+import Association from './components/association/Association';
+import Actualite from './components/actualite/Actualite';
+import Partenaire from './components/partenaire/Partenaire';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Fragment>
+        <Navbar />
+        <MaladieFabry />
+        <Association />
+        <Actualite />
+        <Partenaire />
+        <Contact />
+        <Footer />
+      </Fragment>
+    </Router>
   );
 }
 
